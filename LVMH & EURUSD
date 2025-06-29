@@ -1,2 +1,5 @@
 #Simple Linear Regression
 #Creation of an ANOVA Table with historical prices of LVMH (Y) and EUR/USD (X)
+
+end_date = pd.to_datetime("today")
+start_date = end_date - pd.DateOffset(years=15) 
