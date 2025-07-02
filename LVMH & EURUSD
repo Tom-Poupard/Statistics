@@ -9,3 +9,19 @@ data.columns = ['LVMH_Close', 'EURUSD_Close']
 
 X = data['EURUSD_Close']
 Y = data['LVMH_Close']
+
+X_const = sm.add_constant(X)
+
+model = sm.OLS(Y, X_const).fit()
+Y_pred = model.predict(X_const)
+
+SSR = np.sum((Y_pred - np.mean(Y))**2)
+SSE = np.sum((Y - Y_pred)**2)
+SST = np.sum((Y - np.mean(Y))**2)
+df_reg = 1
+df_res = len(Y) - 2
+MSR = SSR / df_reg
+MSE = SSE / df_res
+R2 = SSR / SST
+F_stat = MSR / MSE
+SEE = np.sqrt(MSE)
