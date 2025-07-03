@@ -25,3 +25,5 @@ MSE = SSE / df_res
 R2 = SSR / SST
 F_stat = MSR / MSE
 SEE = np.sqrt(MSE)
+
+
