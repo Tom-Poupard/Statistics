@@ -3,7 +3,6 @@
 
 end_date = pd.to_datetime("today")
 start_date = end_date - pd.DateOffset(years=15) 
-
 data = pd.concat([lvmh, eurusd], axis=1, join='inner')
 data.columns = ['LVMH_Close', 'EURUSD_Close']
 
