@@ -24,4 +24,11 @@ R2 = SSR / SST
 F_stat = MSR / MSE
 SEE = np.sqrt(MSE)
 
-
+plt.figure(figsize=(10,6))
+plt.scatter(X, Y, alpha=0.5, label='Points observés')
+plt.plot(X, Y_pred, 'r-', label='Droite de régression')
+plt.xlabel('EUR/USD (cours de clôture)')
+plt.ylabel('Cours de clôture LVMH (€)')
+plt.title('Régression linéaire LVMH ~ EUR/USD (15 ans)')
+plt.legend()
+plt.grid(True)
