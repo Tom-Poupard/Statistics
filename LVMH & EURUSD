@@ -32,3 +32,4 @@ plt.ylabel('Cours de clôture LVMH (€)')
 plt.title('Régression linéaire LVMH ~ EUR/USD (15 ans)')
 plt.legend()
 plt.grid(True)
+
