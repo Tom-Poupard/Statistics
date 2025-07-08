@@ -33,3 +33,8 @@ plt.title('Régression linéaire LVMH ~ EUR/USD (15 ans)')
 plt.legend()
 plt.grid(True)
 
+anova_table = pd.DataFrame({
+    'SS': [SSR, SSE, SST],
+    'df': [df_reg, df_res, df_reg + df_res],
+    'MS': [MSR, MSE, np.nan]
+}, index=['Regression', 'Error', 'Total'])
