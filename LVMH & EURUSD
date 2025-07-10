@@ -38,3 +38,10 @@ anova_table = pd.DataFrame({
     'df': [df_reg, df_res, df_reg + df_res],
     'MS': [MSR, MSE, np.nan]
 }, index=['Regression', 'Error', 'Total'])
+
+print("\nTable ANOVA :")
+print(anova_table)
+print(f"\nR carré (R²) = {R2:.4f}")
+print(f"F-statistic = {F_stat:.2f}")
+print(f"p-value (F-test) = {model.f_pvalue:.4g}")
+print(f"SEE (Standard Error of Estimate) = {SEE:.4f}")
