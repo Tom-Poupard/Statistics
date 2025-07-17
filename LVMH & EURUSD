@@ -52,6 +52,7 @@ table_data = [
     ['Error', f"{SSE:.4f}", f"{df_res}", f"{MSE:.4f}"],
     ['Total', f"{SST:.4f}", f"{df_reg + df_res}", '']
 ]
+
 plt.table(cellText=table_data, cellLoc='center', loc='bottom', bbox=[0, -0.35, 1, 0.25])
 plt.figtext(0.5, -0.45, f"SEE (Standard Error of Estimate) = {SEE:.4f}", ha='center', fontsize=10)
 plt.subplots_adjust(left=0.15, bottom=0.3)
