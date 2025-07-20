@@ -8,7 +8,6 @@ data.columns = ['LVMH_Close', 'EURUSD_Close']
 
 X = data['EURUSD_Close']
 Y = data['LVMH_Close']
-
 X_const = sm.add_constant(X)
 model = sm.OLS(Y, X_const).fit()
 Y_pred = model.predict(X_const)
